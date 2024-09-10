@@ -1,0 +1,238 @@
+/* index.css */
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Merriweather Sans', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: #2a3964;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.u-digital {
+    background-color: #ffc107;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Encabezado principal */
+.main-header {
+    background-color: #880000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Economica', sans-serif;
+    margin-top: 10px;
+}
+
+/* Navegación principal */
+.main-nav {
+    background-color: #880000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.search-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.search-form input[type="search"] {
+    padding: 5px;
+    border: none;
+}
+
+.search-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.credential-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.student-photo {
+    max-width: 100%;
+    height: auto;
+}
+
+.student-info p {
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+/* Menú móvil oculto por defecto */
+.mobile-nav {
+    display: none;
+}
+
+/* Mostrar el menú móvil cuando la clase active está presente */
+.mobile-nav.active {
+    display: flex;
+}
+
+/* Media Queries para diseño responsive */
+@media screen and (max-width: 768px) {
+    .main-nav .nav-links {
+        display: none;
+    }
+
+    .responsive-xd {
+        display: flex;
+        justify-content: space-between; /* Alinea los elementos a los extremos */
+        align-items: center; /* Alinea verticalmente al centro */
+        flex-direction: row;
+        width: 100%; /* Asegúrate de que el contenedor ocupe el ancho completo disponible */
+    }
+    
+    .responsive-xd form {
+        margin: 0; /* Elimina cualquier margen si es necesario */
+    }
+    
+    .responsive-xd button {
+        margin-left: 20px; /* Agrega margen si deseas separar un poco los elementos */
+    }
+    
+
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #880000;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .mobile-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-bottom: 1px solid #555;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .credential-container {
+        flex-direction: column;
+    }
+
+    .student-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-bar {
+        flex-direction: row;
+    }
+
+    .top-nav {
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
